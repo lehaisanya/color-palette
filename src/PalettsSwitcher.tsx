@@ -6,11 +6,18 @@ export const PalettsSwitcher = () => {
 
   return (
     <Group>
-      <Button color="brand" onClick={() => setPalette('my-blue')}>
-        Blue
+      <Button color="brand" onClick={() => setPalette('light-blue')}>
+        Light Blue
       </Button>
-      <Button color="brand" onClick={() => setPalette('my-red')}>
-        Red
+      <Button color="brand" onClick={() => setPalette('light-red')}>
+        Light Red
+      </Button>
+
+      <Button color="brand" onClick={() => setPalette('dark-blue')}>
+        Dark Blue
+      </Button>
+      <Button color="brand" onClick={() => setPalette('dark-red')}>
+        Dark Red
       </Button>
     </Group>
   )

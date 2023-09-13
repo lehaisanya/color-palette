@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
 } from '@mantine/core'
-import { paletts } from './theme/paletts'
+import { palettes } from './theme/palettes'
 import {
   ColorPaletteProvider,
   useColorPaletteState,
@@ -17,7 +17,7 @@ import { PalettsSwitcher } from './PalettsSwitcher'
 
 export const App = () => {
   // Стейт для вибраної палети
-  const [palette, setPalette] = useColorPaletteState('my-blue')
+  const [palette, setPalette] = useColorPaletteState('light-blue')
 
   // Провайдер потрібен для того, щоб прокинути setPalette,
   // якщо нищестоящі компоненти будуть міняти палету
@@ -26,7 +26,7 @@ export const App = () => {
       <MantineProvider
         theme={{
           // Передаєм кольори вибраної палети
-          colors: paletts[palette],
+          ...palettes[palette],
         }}
         withGlobalStyles
         withNormalizeCSS

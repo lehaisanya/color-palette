@@ -1,9 +1,9 @@
-import { PalettsName } from "./theme/paletts";
-import { createColorPaletteContext } from "./createColorPaletteContext";
+import { PalettesName } from './theme/palettes'
+import { createColorPaletteContext } from './createColorPaletteContext'
 
 export const {
-    ColorPaletteContext,
-    ColorPaletteProvider,
-    useColorPaletteState,
-    useColorPalette
-} = createColorPaletteContext<PalettsName>()
+  ColorPaletteContext,
+  ColorPaletteProvider,
+  useColorPaletteState,
+  useColorPalette,
+} = createColorPaletteContext<PalettesName>()

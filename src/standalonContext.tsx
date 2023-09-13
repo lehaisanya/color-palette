@@ -5,15 +5,15 @@ import {
   useContext,
   useState,
 } from 'react'
-import { PalettsName } from './theme/paletts'
+import { PalettesName } from './theme/palettes'
 
-export const useColorPaletteState = (defaultPalette: PalettsName) => {
-  return useState<PalettsName>(defaultPalette)
+export const useColorPaletteState = (defaultPalette: PalettesName) => {
+  return useState<PalettesName>(defaultPalette)
 }
 
 interface ColorPaletteContextValue {
-  palette: PalettsName
-  setPalette: (newPalette: PalettsName) => void
+  palette: PalettesName
+  setPalette: (newPalette: PalettesName) => void
 }
 
 export const ColorPaletteContext = createContext<ColorPaletteContextValue>(
