@@ -1,4 +1,4 @@
-import { ColorScheme, DefaultMantineColor, Tuple } from '@mantine/core'
+import { DefaultMantineColor, MantineColorsTuple } from '@mantine/core'
 
 type CustomColors = 'brand'
 // Цей тип перелічує всі доступні палети
@@ -7,8 +7,8 @@ export type PalettesName = 'light-red' | 'light-blue' | 'dark-red' | 'dark-blue'
 // Цей тип потрібен, якщо палети описані в окремому файлі
 // Бо тс не розуміє що там масив із 10 строк завжди
 type Palette = {
-  colorScheme: ColorScheme
-  colors: Record<CustomColors, Tuple<string, 10>>
+  colorScheme: 'light' | 'dark'
+  colors: Record<CustomColors, MantineColorsTuple>
 }
 
 export const palettes: Record<PalettesName, Palette> = {
@@ -88,6 +88,6 @@ type ExtendedCustomColors = CustomColors | DefaultMantineColor
 
 declare module '@mantine/core' {
   export interface MantineThemeColorsOverride {
-    colors: Record<ExtendedCustomColors, Tuple<string, 10>>
+    colors: Record<ExtendedCustomColors, MantineColorsTuple>
   }
 }

@@ -24,12 +24,12 @@ export const App = () => {
   return (
     <ColorPaletteProvider palette={palette} setPalette={setPalette}>
       <MantineProvider
+        // Передаєм колірну схему вибраної палети
+        forceColorScheme={palettes[palette].colorScheme}
         theme={{
           // Передаєм кольори вибраної палети
-          ...palettes[palette],
+          colors: palettes[palette].colors,
         }}
-        withGlobalStyles
-        withNormalizeCSS
       >
         <Center h="100vh">
           <Paper shadow="xs" p="md">
@@ -37,7 +37,7 @@ export const App = () => {
               {/* Використовуєм кастомний колір */}
               <Button color="brand">Button</Button>
               <Checkbox color="brand" label="Checkbox" checked />
-              <Text color="brand">Text</Text>
+              <Text c="brand">Text</Text>
 
               <PalettsSwitcher />
             </Stack>
